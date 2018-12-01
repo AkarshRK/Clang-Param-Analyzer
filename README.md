@@ -1,34 +1,11 @@
 # Clang-Param-Analyzer
 
 A program to analyze C++ source code and detects functions or methods whose parameter count is more than three.
-
+`Note: You need at least 150 GB of disk space to build and work on this project.`
 ## Requirements
-### Install cmake (version 3.6 or higher) 
-1. Installation by a PPA
-```
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:george-edison55/cmake-3.x
-sudo apt-get update
-```
-* When cmake is not yet installed:
-```
-sudo apt-get install cmake
-```
-* When cmake is already installed:
-```
-sudo apt-get upgrade
-```
-2. Compile it yourself.
-```
-sudo apt-get install build-essential
-wget http://www.cmake.org/files/v3.2/cmake-3.12.0.tar.gz
-tar xf cmake-3.12.0.tar.gz
-cd cmake-3.12.0
-./configure
-make
-sudo apt-get install checkinstall
-sudo checkinstall
-```
+###### cmake (version 3.6 or higher) 
+###### clang and llvm
+
 ### Build Clang and llvm
 ***To build clang and llvm, follow the instructions below or you can visit*** https://clang.llvm.org/get_started.html
 1. Check out LLVM:
@@ -69,6 +46,7 @@ $ make -f tools/clang/tools/libclang/CMakeFiles/install-libclang-stripped.dir/bu
 ```
 
 Now you can run your tool on any C++ code as follows:
+Copy the above "Param.cpp" into build directory.
 ```
 $ cd ~/<your_clang_llvm_directory>/build
 $ bin/param-analyzer Param.cpp
@@ -76,6 +54,10 @@ $ bin/param-analyzer Param.cpp
 "add" has more than three parameters. 
 ```
 
+## The above project was run on a system with following configurations or settings:
+* Operating system: Linux Mint 18.3 "Sylvia" - Cinnamon (64-bit)
+* Processor: Intel® Core™ i7-7500U Processor  2.70GHz 2 Core(s)
+* Memory (RAM): 15.5 GB
 
 
 
